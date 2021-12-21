@@ -6,7 +6,7 @@ Takao Murakami, Kenta Takahashi, "Toward Evaluating Re-identification Risks in t
 The source code is mostly implemented with C/C++. Data preprocessing is implemented with Python. This software is released under the MIT License.
 
 # Directory Structure
-- cpp/			&emsp;C/C++ codes (put the required files under this directory; see cpp/README.md).
+- cpp/			&emsp;C/C++ codes.
 - data/			&emsp;Output data (obtained by running codes).
   - FS/			&emsp;Output data in FS (Foursquare dataset).
   - ML/			&emsp;Output data in ML (MovieLens dataset).

@@ -99,7 +99,7 @@ $ ./EvalKL ../data/FS AL_RR-e-1-l1_ak2_rm1_rnl1_nl0 1 0 0
 
 Then the PSE (kl_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1_es0.csv) is output in data/FS/. This file contains the KL divergence calculated by the generalized k-NN estimator.
 
-We plotted Figure 5 (left) in our paper based on this result. See results/Fig5_PSEmax for details.
+We plotted Figure 5 (left) in our paper based on this result. See results/Fig5_PSEmax.xlsx for details.
 
 **(5) Evaluating PSE (Personal Identification System Entropy) in ML**
 

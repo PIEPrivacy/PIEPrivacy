@@ -81,7 +81,7 @@ $ cd cpp/
 $ ./RR_FS ../data/FS AL -1 [Testing Trace Length (1-5)]
 ```
 
-Then a testing trace without no obfuscation (testtraces_AL_RR-e-1-l[1-5].csv) is output in data/FS/. To use RR with privacy budget epsilon, change "-1" in the 4th argument to epsilon.
+Then a testing trace with trace length 1 to 5 without obfuscation (testtraces_AL_RR-e-1-l[1-5].csv) is output in data/FS/. To use RR with privacy budget epsilon, change "-1" in the 4th argument to epsilon.
 
 Run the following commands.
 

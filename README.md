@@ -90,7 +90,7 @@ $ ./CalcScore_FS ../data/FS AL org 2 1
 $ ./CalcScore_FS ../data/FS AL RR-e-1-l[1-5] 2 1
 ```
 
-Then genuine scores (ge_score_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0.csv) and impostor scores (im_score_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1.csv) are output in data/FS/.
+Then genuine scores (ge_score_AL_ak2_rm1_rnl1_nl0.csv and ge_score_AL_RR-e-1-l[1-5]_ak2_rm1_rnl1_nl0.csv) and impostor scores (im_score_AL_ak2_rm1_rnl1_nl0_r1.csv and im_score_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1.csv) are output in data/FS/.
 
 Run the following commands.
 
@@ -99,9 +99,9 @@ $ ./EvalKL ../data/FS AL_ak2_rm1_rnl1_nl0 1 100000 0
 $ ./EvalKL ../data/FS AL_RR-e-1-l[1-5]_ak2_rm1_rnl1_nl0 1 0 0
 ```
 
-Then the PSE (kl_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1_es0.csv) is output in data/FS/. This file contains the KL divergence calculated by the generalized k-NN estimator.
+Then the PSE (kl_AL_ak2_rm1_rnl1_nl0_r1_es0.csv and kl_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1_es0.csv) is output in data/FS/. These files contain the KL divergence calculated by the generalized k-NN estimator.
 
-We plotted Figure 5 in our paper based on this result. See results/Fig5_PSEmax.xlsx for details.
+We plotted Figure 5 in our paper based on these results. See results/Fig5_PSEmax.xlsx for details.
 
 **(5) Evaluating PSE (Personal Identification System Entropy) in ML**
 

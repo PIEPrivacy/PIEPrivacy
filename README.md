@@ -30,6 +30,8 @@ $ cd ../
 
 **(2) Download and preprocess FS**
 
+NOTE: We used check-in data all over the world in FS. But it may take a lot of time and memory to preprocess FS in this case (we used a supercomputer). To reduce time and memory, we recommend to change "AL" (all over the world) to "NY" (New York).
+
 Download the [Foursquare dataset (Global-scale Check-in Dataset with User Social Networks)](https://sites.google.com/site/yangdingqi/home/foursquare-dataset) and place the dataset in data/FS/.
 
 Run the following command to fix garbled text.
@@ -74,6 +76,8 @@ Then a user index file (userindex_4.0.csv), movie index file (movieindex_4.0.csv
 
 **(4) Evaluating PSE (Personal Identification System Entropy) in FS**
 
+NOTE: We used check-in data all over the world in FS. But it may take a lot of time and memory to preprocess FS in this case (we used a supercomputer). To reduce time and memory, we recommend to change "AL" (all over the world) to "NY" (New York).
+
 Run the following commands.
 
 ```
@@ -81,7 +85,7 @@ $ cd cpp/
 $ ./RR_FS ../data/FS AL -1 [Testing Trace Length (1-5)]
 ```
 
-Then a testing trace with trace length 1 to 5 without obfuscation (testtraces_AL_RR-e-1-l[1-5].csv) is output in data/FS/. To use RR with privacy budget epsilon, change "-1" in the 4th argument to epsilon.
+Then testing traces with trace length 1 to 5 without obfuscation (testtraces_AL_RR-e-1-l[1-5].csv) are output in data/FS/. To use RR with privacy budget epsilon, change "-1" in the 4th argument to epsilon.
 
 Run the following commands.
 
@@ -90,7 +94,7 @@ $ ./CalcScore_FS ../data/FS AL org 2 1
 $ ./CalcScore_FS ../data/FS AL RR-e-1-l[1-5] 2 1
 ```
 
-Then genuine scores (ge_score_AL_ak2_rm1_rnl1_nl0.csv and ge_score_AL_RR-e-1-l[1-5]_ak2_rm1_rnl1_nl0.csv) and impostor scores (im_score_AL_ak2_rm1_rnl1_nl0_r1.csv and im_score_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1.csv) are output in data/FS/.
+Then genuine scores (ge_score_AL_ak2_rm1_rnl1_nl0.csv, ge_score_AL_RR-e-1-l[1-5]_ak2_rm1_rnl1_nl0.csv) and impostor scores (im_score_AL_ak2_rm1_rnl1_nl0_r1.csv, im_score_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1.csv) are output in data/FS/.
 
 Run the following commands.
 
@@ -99,7 +103,7 @@ $ ./EvalKL ../data/FS AL_ak2_rm1_rnl1_nl0 1 100000 0
 $ ./EvalKL ../data/FS AL_RR-e-1-l[1-5]_ak2_rm1_rnl1_nl0 1 0 0
 ```
 
-Then the PSE (kl_AL_ak2_rm1_rnl1_nl0_r1_es0.csv and kl_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1_es0.csv) is output in data/FS/. These files contain the KL divergence calculated by the generalized k-NN estimator.
+Then the PSE (kl_AL_ak2_rm1_rnl1_nl0_r1_es0.csv, kl_AL_RR-e-1-l1_ak2_rm1_rnl1_nl0_r1_es0.csv) is output in data/FS/. These files contain the KL divergence calculated by the generalized k-NN estimator.
 
 We plotted Figure 5 in our paper based on these results. See results/Fig5_PSEmax.xlsx for details.
 
